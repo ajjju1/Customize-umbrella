@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:ital,wght@0,300;0,400;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <title>Welcome to Customize Umbrella</title>
+</head>
+<body>
+    <div>
+        <div class = "maindiv flex justify-content-center align-items-center">
+            <div class = "imageContainer ">
+                <img class= "image" id="image" src="./assets/Blue umbrella.png" alt="your image" />
+                <img id = "brand-Logo" src=""/>
+            </div>
+            <div class = "uploadImageBox ">
+                <h1>Customize Umbrella</h1> 
+                    <div class="color-palate flex ">
+                        <div class="bg-blue" id="bg-blue"></div>
+                        <div class="bg-pink" id="bg-pink"></div>
+                        <div class="bg-yellow" id="bg-yellow"></div>
+                    </div>
+                <div>
+                    <h3>Customize your Umbrella</h3>
+                    <p>Upload a logo for an instant preview.</p>
+                    <!-- <button style="cursor:pointer" id="button"><i class="loader"></i>Click me</button> -->
+                    <span class="span-info">.png and .jpg files only.Max size if 5MB only.</span>
+                    <div class='file' id="file">
+                        <label for='input-file'>
+                            <i class="icon upload-Icon" id="upload-Icon""></i><i class="icon loader-Icon" id="loader-Icon"></i>
+                           <span id="label-span">Select a file</span>
+                           <span id="flex-handle"></span>
+                           <i class= "icon close-Icon" id="close-Icon" onclick="DeleteImage()"></i>
+                        </label>
+                        <input type='file' style="display:none"  id="input-file" class=".upload-label" onchange="readURL(this);" />
+                        <!-- <input id='input-file' type='file' /> -->
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
